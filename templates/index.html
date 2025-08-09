@@ -1,0 +1,42 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do</h1>
+        <form id="add-form">
+            <input class="new-title" placeholder="Task title" required />
+            <div class="custom-select-wrapper" tabindex="0" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="select-label">
+                <span id="select-label" class="custom-select-selected">Select status</span>
+                <ul class="custom-select-options" role="listbox" tabindex="-1" hidden></ul>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </header>
+
+    <main class="board" id="board">
+        <div class="list">
+            <div class="list-header">
+                <h2>Example List</h2>
+                <button class="delete-list-btn" title="Delete List" aria-label="Delete List">
+                    <img src="/static/bin.png" alt="Delete" class="delete-icon">
+                </button>
+            </div>
+            <div class="list-content"></div>
+        </div>
+
+        <button id="add-list-btn" class="add-list-btn">+ Add another list</button>
+    </main>
+
+    <script src="/static/app.js"></script>
+    <a href="/faq" class="faq-button">Questions</a>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        .faq-container h1 {
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        .faq-item {
+            margin-bottom: 16px;
+        }
+        .faq-item h3 {
+            margin-bottom: 6px;
+            color: #111827;
+        }
+        .faq-item p {
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Questions you may be wondering</h1>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <h3>How is data stored in this project?</h3>
+                <p>Everything is stored in a SQLite database. The Python backend uses SQLAlchemy ORM to make Python classes (BoardList and Task) for their corresponding database tables.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Which programming languages are used in this project?</h3>
+                <p>The backend is written in Python and uses Flask to run. The frontend is written in HTML, CSS, and JavaScript. Admittedly, I had to watch a couple of tutorials on this since some of it was new to me.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What happens with dragging and dropping between lists?</h3>
+                <p>When your mouse hovers over a task, you can click and hold to move it to another list. This sends a request to the backend to update it.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How is the app aware of my lists?</h3>
+                <p>The app creates a unique session-based ID for every visitor. I decided to use this after testing mobile compatibility and discovering that whatever you do on one device affects all others.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What happens when I delete a list?</h3>
+                <p>When you delete a list, it gets removed from the database completely. Because of how the backend is set up, any tasks that were inside that list also get deleted so they don’t just sit there doing nothing.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do I add a new task?</h3>
+                <p>When you add a task on the frontend, it sends the info to the backend through a POST request. The backend then saves it to the database and sends the updated data back so it appears without you refreshing.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I use this on my phone?</h3>
+                <p>No, I tried testing it on my phone and it wouldn’t work. I tried adding compatibility for mobile devices, but I just have no clue how.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Why did you choose SQLite instead of something else?</h3>
+                <p>I went with SQLite because it’s simple to set up and works for small projects like this. I didn’t need something huge like PostgreSQL or MySQL for what I was doing.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where is the code for the drag-and-drop feature?</h3>
+                <p>The code for the drag-and-drop feature is located in <code>static/app.js</code>. It listens for when you hold your mouse on a card, tracks where your mouse is, and sends the update to the backend.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Does the app save automatically?</h3>
+                <p>Yes, everything you do in the app—such as moving, adding, or deleting tasks—is sent to the backend and saved instantly without you pressing a button.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I share my lists with someone else?</h3>
+                <p>Not really. Because it’s based on your session ID, someone else would need to have the exact same session cookie to see your stuff, which basically means using the same device and browser.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What happens if the database file gets deleted?</h3>
+                <p>If the database file got deleted, all tasks made by users and custom lists would be lost, since the backend automatically generates the file with only "To-do", "In Progress", and "Completed".</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How long did it take to make?</h3>
+                <p>It took me about 3 days in total. I spent most of the first day watching tutorials on how to properly set this up, because as I coded I kept running into errors I had no clue about, plus a few things I just didn’t know how to do.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What was the hardest part to code?</h3>
+                <p>The hardest part for me was probably getting the changes in the frontend to match up with the backend and making sure they stayed permanent just for the client. That became very confusing as I added more and more features.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Did you have any inspiration?</h3>
+                <p>Yes, I got inspiration for the design and the whole idea from a website called Trello. I use Trello often when working on personal projects.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
