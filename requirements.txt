@@ -3,3 +3,4 @@ Flask-Cors==3.0.10
 SQLAlchemy==1.4.48
 pymysql==1.1.0
 python-dotenv==1.0.0
+gunicorn==21.2.0
