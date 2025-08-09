@@ -122,7 +122,7 @@ async function createListElement(list) {
 
     const bin = document.createElement("button");
     bin.className = "delete-list-btn";
-    bin.innerHTML = `<img src="/static/bin.png" alt="Delete" class="delete-icon">`;
+    bin.innerHTML = `<img src="/static/Bin.png" alt="Delete" class="delete-icon">`;
     bin.title = "Delete list";
     bin.addEventListener("click", async (e) => {
         e.stopPropagation();
