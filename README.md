@@ -30,3 +30,13 @@ Features
 
 License:
 This project is licensed under the MIT License — free to use, modify, and distribute.
+
+Note:
+Ignore FAQ Page, this is a project for school. To remove it:
+
+- Delete the route in app.py
+Open app.py and remove or comment out the following section:
+
+```@app.route("/faq")
+def faq():
+    return render_template("faq.html")```
