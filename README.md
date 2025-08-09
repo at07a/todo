@@ -37,9 +37,11 @@ Ignore FAQ Page, this is a project for school. To remove it:
 - Delete the route in app.py
 Open app.py and remove or comment out the following section:
 
-```@app.route("/faq")```
-```def faq():```
-```    return render_template("faq.html")```
+```
+@app.route("/faq")
+def faq():
+    return render_template("faq.html")
+```
 
 - Remove the FAQ button from the frontend
 In the templates folder (templates/index.html), find and remove the element with the class faq-button, for example:
