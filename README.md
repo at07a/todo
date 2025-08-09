@@ -78,4 +78,5 @@ In static/style.css, delete the .faq-button styles:
 After making these changes, restart the Flask server:
 
 ```python app.py```
+
 The FAQ page will now be completely gone.
