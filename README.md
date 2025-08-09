@@ -54,7 +54,8 @@ In the templates folder, delete faq.html.
 - Remove FAQ-related CSS (optional)
 In static/style.css, delete the .faq-button styles:
 
-```.faq-button {
+```
+.faq-button {
     position: fixed;
     bottom: 20px;
     left: 20px;
